@@ -1,26 +1,15 @@
-import React, { Component } from "React";
+import React from "react";
 
-class App extends Component {
-  constructor() {
-    super();
+const Overview = (props) => {
+  const { tasks } = props;
 
-    this.state = {
-      task: { text: '' },
-      tasks: [],
-    };
-  }
+  return (
+    <ul>
+      {tasks.map((task) => {
+        return <li key={task.id}>{task.text}</li>;
+      })}
+    </ul>
+  );
+};
 
-  render() {
-    const { task, tasks } = this.state;
-
-    return (
-      <div>
-        <form>
-          <label htmlFor="taskInput">Enter task</label>
-          <input type="text" id="taskInput" />
-          <button type="submit">Add Task</button>
-        </form>
-      </div>
-    )
-  };
-}
+export default Overview;
