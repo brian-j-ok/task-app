@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from "React";
 
 class App extends Component {
   constructor() {
@@ -24,5 +24,3 @@ class App extends Component {
     )
   };
 }
-
-export default App;
