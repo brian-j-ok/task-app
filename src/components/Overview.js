@@ -4,9 +4,14 @@ const Overview = (props) => {
   const { tasks } = props;
 
   return (
-    <ul>
+    <ul style={{'list-style-type':'none'}}>
       {tasks.map((task) => {
-        return <li key={task.id}>{task.text}</li>;
+        return (
+          <div>
+            <li key={task.id}>{(tasks.indexOf(task)+1) + '. ' + task.text}</li>
+            <button>Delete</button>
+          </div>
+        );
       })}
     </ul>
   );

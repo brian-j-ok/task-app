@@ -9,7 +9,7 @@ class App extends Component {
     this.state = {
       task: {
         text: '',
-        id: uniqid()
+        id: uniqid(),
       },
       tasks: [],
     };
@@ -30,7 +30,7 @@ class App extends Component {
       tasks: this.state.tasks.concat(this.state.task),
       task: {
         text: '',
-        id: uniqid()
+        id: uniqid(),
       },
     });
   };
